@@ -1,10 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Dao nguoc cac phan tu trong mang</title>
 </head>
 <body>
-$END$
+<h3>Nhap vao cac phan tu trong mang:</h3>
+<input id="input" type="text">
+<button id="add">Add</button>
+<button id="display">Display</button>
+<button id="daonguoc">Dao nguoc</button>
+<hr>
+<h3 id="result"></h3>
+<h4 id="result2"></h4>
+
+<script>
+    let kq = document.getElementById('result');
+    let kq2 = document.getElementById('result2');
+    let addBtn = document.getElementById('add');
+    let displayBtn = document.getElementById('display');
+    let daoNguocBtn = document.getElementById('daonguoc');
+    let arr = [];
+
+    function Add(){
+        let input = document.getElementById('input').value;
+        arr.push(input);
+        alert("add  " + input + "  vao array");
+    }
+    function Display(){
+        kq.innerText = "Mang: [" +arr  + "]";
+    }
+    function daoNguoc(){
+        let first = 0;
+        let last = arr.length-1;
+        while (first<last) {
+            let temp = arr[first];
+            arr[first] = arr[last];
+            arr[last] = temp;
+            first++;
+            last--;
+        }
+        kq2.innerText = "Mang dao nguoc: [" +arr  + "]";
+    }
+
+    addBtn.addEventListener("click", Add);
+    displayBtn.addEventListener("click", Display);
+    daoNguocBtn.addEventListener('click', daoNguoc);
+</script>
 </body>
 </html>
