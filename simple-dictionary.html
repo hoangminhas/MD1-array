@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu dien</title>
+</head>
+<body>
+<form>
+    <h1>Dictionary</h1>
+    <input oninput="getDict()" id="inputText"
+           type="text" placeholder="Type a word">
+    <h3 id="result"></h3>
+</form>
+
+<script>
+let vnWords = ['xin chao', 'tam biet', 'may tinh', 'but bi', 'quyen so',
+                'binh nuoc', 'ban phim', 'ghe', 'tai nghe', 'o cam sac'];
+let engWords = ['Hello', 'Goodbye', 'Computer', 'Pen', 'Notebook',
+            'Water bottle', 'Keyboard', 'Chair', 'Earphone', 'Charger'];
+
+function getDict() {
+    let input = document.getElementById('inputText').value;
+    console.log(input)
+    let result = document.getElementById('result');
+
+    if (engWords.indexOf(input) >= 0) {
+        result.innerText = "Vietnamese: " + vnWords[engWords.indexOf(input)];
+    }else {
+        result.innerText = "Vietnamese: Khong co";
+
+    }
+}
+
+
+
+</script>
+</body>
+</html>
