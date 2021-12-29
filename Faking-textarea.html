@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Typing Prank</title>
+</head>
+<body>
+<h1>Type anything here boy!</h1>
+<textarea id="typing" onkeydown="prank()"></textarea>
+
+<script>
+  function prank() {
+    let arr = ['','S','U','C','K',' ','M','Y',
+      ' ','D','I','C','K',' ','B','I','T','C','H','!'];
+    let result = '';
+    let input = document.getElementById('typing').value;
+    let j = input.length;
+    if (j>0){
+      for (let i=1; i<= j; i++){
+        result += arr[i];
+        if (i == arr.length){
+          input = "";
+          result = "";
+        }
+      }
+    }
+    input = n;
+    n = '';
+    setTimeout(prank(), 1);
+  }
+
+</script>
+</body>
+</html>

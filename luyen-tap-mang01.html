@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check check</title>
+</head>
+<body>
+<script>
+
+    //Bai 1:
+    // let arr = [1,23,21,14,4,7,8,99,50,0];
+    // function over10(arr) {
+    //     let newArr = [];
+    //     for (let arrElement of arr) {
+    //         if (arrElement>=10){
+    //             newArr.push(arrElement);
+    //         }
+    //     }
+    //     return newArr;
+    // }
+    // console.log(over10(arr));
+
+    //Bai 2:TIm max va index trong mang
+    function randomArr() {
+        let randomArr = [];
+        for (let i=0; i<10; i++){
+            let randomNum = Math.floor(Math.random() * 100);
+            randomArr.push(randomNum);
+        }
+        return randomArr;
+    }
+    // function findMaxAndIndex(arr) {
+    //     console.log(arr);
+    //     let max = arr[0];
+    //     for (let arrElement of arr) {
+    //         if (max < arrElement){
+    //             max = arrElement;
+    //         }
+    //     }
+    //     return "Max value: " + max + " & " + "index: " + arr.indexOf(max);
+    // }
+    // console.log(findMaxAndIndex(randomArr()));
+
+    //Bai 3: Print max va gia tri trung binh cac phan tu trong mang
+    // function maxAndAvg(arr) {
+    //     console.log(arr);
+    //     let max = arr[0];
+    //     let sum = 0;
+    //     for (let arrElement of arr) {
+    //         if (max < arrElement){
+    //             max = arrElement;
+    //         }
+    //     }
+    //     for (let arrElement of arr) {
+    //         sum += arrElement;
+    //     }
+    //     return "Max value: " + max + " & " + "Average: " + sum/arr.length;
+    // }
+    // console.log(maxAndAvg(randomArr()));
+
+    //Bai 4: tra ve ham dao nguoc
+    // function reverseArr(arr) {
+    //     let newArr = [];
+    //     for (let i=arr.length-1; i>=0; i--){
+    //         newArr.push(arr[i]);
+    //     }
+    //     return newArr;
+    // }
+    // console.log(reverseArr([1,3,5,7,4]));
+
+    //Bai 5:
+    // function countNegative(string) {
+    //     let arr = string.split(' ');
+    //     let count = 0;
+    //     for (let arrElement of arr) {
+    //         if (arrElement < 0){
+    //             count++;
+    //         }
+    //     }
+    //     return count;
+    // }
+    // console.log(countNegative('-2 -3 -4 5'));
+
+    //bai 6:
+    // let arr = [27, 99, 73, 4, 17, 69, 13];
+    // let soNguyen = +prompt("Nhap vao so nguyen");
+    // if(arr.indexOf(soNguyen) > -1){
+    //     alert(soNguyen + ' co o trong mang');
+    // } else {
+    //     alert(soNguyen + ' khong co o trong mang');
+    // }
+
+    //Bai 7:
+    // function eliminateV(v) {
+    //     let arr = [1,2,3,4,5,6,7,8,9,10];
+    //     if (arr.indexOf(v) >= 0){
+    //         for (let i = arr.indexOf(v); i<arr.length; i++){
+    //             arr[i] = arr[i+1];
+    //         }
+    //         arr[arr.length-1] = 0;
+    //     } else{
+    //         return "V ko co trong mang";
+    //     }
+    //     return arr;
+    // }
+    // console.log(eliminateV(12));
+
+    //Bai 8: Sap xep mang giam dan
+    // function descendArr(arr) {
+    //     let long = arr.length;
+    //     let newArr = [];
+    //     while (newArr.length < long){
+    //         let i = 0;
+    //         let max = arr[i];
+    //         for (i=1; i<arr.length; i++){
+    //             if(max < arr[i]){
+    //                 max = arr[i];
+    //             }
+    //         }
+    //         newArr.push(max);
+    //         arr.splice(arr.indexOf(max), 1);
+    //     }
+    //     return newArr;
+    // }
+    // console.log(descendArr([1,5,3,9,6,11]))
+
+
+    // function decimals(num){
+    //     let sum = 0;
+    //     for (let i = num.length-1; i>=0; i--){
+    //         sum += parseInt(num[num.length-i-1] * Math.pow(2,i));
+    //     }
+    //     return sum;
+    // }
+    //
+    // decimals(1010);
+    //BTVN: doi tu nhi phan sang co so 16
+
+    //BTVN: Tim cac phan tu ton tai o ca 2 mang va in ra cac phan tu do.
+    let a = [0,3,2,1,7,8,9,10];
+    let b = [1,3,5,7,9,11,13,15];
+    function resemblance(arr1, arr2) {
+        let newArr = [];
+        for (let arr1Element of arr1) {
+            if (arr2.indexOf(arr1Element) >= 0){
+                newArr.push(arr1Element);
+            }
+        }
+        return newArr;
+    }
+    console.log(resemblance(a,b));
+
+
+</script>
+</body>
+</html>
